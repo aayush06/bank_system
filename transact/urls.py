@@ -9,4 +9,6 @@ router.register(r"account-transaction", apis.CustomerTransactView,
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^transaction-report/$', apis.ManagerReportView.as_view(),
+        name="transaction-report"),
 ]
